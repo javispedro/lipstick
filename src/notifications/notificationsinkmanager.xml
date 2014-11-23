@@ -1,0 +1,18 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.nemomobile.NotificationSinkManager1">
+    <method name="RegisterSink">
+      <arg name="sink" type="o" direction="in"/>
+    </method>
+    <method name="UnregisterSink">
+      <arg name="sink" type="o" direction="in"/>
+    </method>
+
+    <method name="InvokeAction">
+      <arg name="id" type="u"/>
+      <arg name="action_key" type="s"/>
+    </signal>
+
+	<!-- TODO: Ideally move GetNotifications over here too. -->
+  </interface>
+</node>
